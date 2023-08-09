@@ -6,13 +6,13 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log("Server Listening on PORT:", port);
+  console.log("Server Listening on PORT:", PORT);
 });
 
-app.get('/status', (request, response) => {
+app.get("/status", function (request, response) {
   const status = {
-     Status: 'Running';
+    Status: "Running",
   };
-  
+
   response.send(status);
 });
